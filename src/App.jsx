@@ -8,6 +8,7 @@ import Team from "./components/Team";
 import Reviews from "./components/Reviews";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import YandexMetrika from "./lib/YandexMetrikas";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <Reviews />
       <Contacts />
       <Footer />
+      <YandexMetrika />
     </div>
   );
 }
