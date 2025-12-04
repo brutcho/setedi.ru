@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import YandexMetrika from "../lib/YandexMetrika";
 
 export default function Footer() {
   return (
@@ -122,6 +123,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      <YandexMetrika />
     </footer>
   );
 }
