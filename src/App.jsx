@@ -18,7 +18,7 @@ export default function App() {
       <Benefits />
       <Prices />
       <Gallery />
-      <Team />
+      {/* <Team />*/}
       <Reviews />
       <Contacts />
       <Footer />

@@ -6,28 +6,28 @@ const massageTypes = [
   "Лечебно-восстановительный",
   "Лимфодренажный (коррекция фигуры, отёков)",
   "Релакс (с аромамаслами, расслабляющий)",
-  "Спорт (интенсивная проработка мышц)"
+  "Спорт (интенсивная проработка мышц)",
 ];
 
 const massagePrices = {
   single: {
-    "30": "2 100 ₽",
-    "60": "3 150 ₽",
-    "90": "4 500 ₽",
-    "120": "5 640 ₽"
+    30: "2 100 ₽",
+    60: "3 150 ₽",
+    90: "4 500 ₽",
+    120: "5 640 ₽",
   },
   block5: {
-    "30": "9 975 ₽",
-    "60": "14 960 ₽",
-    "90": "21 375 ₽",
-    "120": "26 790 ₽"
+    30: "9 975 ₽",
+    60: "14 960 ₽",
+    90: "21 375 ₽",
+    120: "26 790 ₽",
   },
   block10: {
-    "30": "18 900 ₽",
-    "60": "28 350 ₽",
-    "90": "40 500 ₽",
-    "120": "50 760 ₽"
-  }
+    30: "18 900 ₽",
+    60: "28 350 ₽",
+    90: "40 500 ₽",
+    120: "50 760 ₽",
+  },
 };
 
 const specialServices = [
@@ -37,7 +37,7 @@ const specialServices = [
     duration: "120 минут",
     single: "6 700 ₽",
     block: "25 400 ₽ (блок из 4 процедур)",
-    popular: false
+    popular: false,
   },
   {
     name: "Силуэт",
@@ -46,60 +46,60 @@ const specialServices = [
     single: "4 900 ₽",
     block5: "23 275 ₽ (блок из 5 процедур)",
     block10: "44 100 ₽ (блок из 10 процедур)",
-    popular: true
-  }
+    popular: true,
+  },
 ];
 
 const additionalServices = [
   {
     name: "Парафинотерапия для рук",
     description: "Увлажнение + маска",
-    price: "700 ₽"
+    price: "700 ₽",
   },
   {
     name: "Парафинотерапия для ног",
     description: "Смягчение + педикюрный уход",
-    price: "700 ₽"
+    price: "700 ₽",
   },
   {
     name: "Обертывание",
     description: "",
-    price: "1 700 ₽"
+    price: "1 700 ₽",
   },
   {
     name: "Скрабирование всего тела",
     description: "",
-    price: "990 ₽"
-  }
+    price: "990 ₽",
+  },
 ];
 
 const comboServices = [
   {
     name: "Релакс + обертывание",
     duration: "120 минут",
-    price: "4 900 ₽"
+    price: "4 900 ₽",
   },
   {
     name: "Силуэт + парафин для ног",
     duration: "80 минут",
-    price: "5 300 ₽"
+    price: "5 300 ₽",
   },
   {
     name: "Массаж + парафин для рук и ног",
     duration: "130 минут",
-    price: "6 600 ₽"
+    price: "6 600 ₽",
   },
   {
     name: "Парафин для рук и ног",
     duration: "",
-    price: "1 100 ₽"
+    price: "1 100 ₽",
   },
   {
     name: "Массаж + скраб + обертывание + маска для рук и ног",
     duration: "150 минут",
     price: "7 990 ₽",
-    popular: true
-  }
+    popular: true,
+  },
 ];
 
 export default function Prices() {
@@ -132,7 +132,7 @@ export default function Prices() {
             { id: "massage", label: "Массажи" },
             { id: "special", label: "Специальные" },
             { id: "additional", label: "Дополнительно" },
-            { id: "combo", label: "Комбо" }
+            { id: "combo", label: "Комбо" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -174,21 +174,44 @@ export default function Prices() {
               <table className="w-full bg-gray-900 rounded-lg border border-purple-900/30 overflow-hidden">
                 <thead className="bg-purple-900/20">
                   <tr>
-                    <th className="px-4 py-3 text-left font-semibold text-white">Длительность</th>
-                    <th className="px-4 py-3 text-center font-semibold text-white">1 процедура</th>
-                    <th className="px-4 py-3 text-center font-semibold text-white">Блок из 5</th>
-                    <th className="px-4 py-3 text-center font-semibold text-white">Блок из 10</th>
+                    <th className="px-4 py-3 text-left font-semibold text-white">
+                      Сеанс
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-white">
+                      1 процедура
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-white">
+                      Блок из 5
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-white">
+                      Блок из 10
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.entries(massagePrices.single).map(([duration, singlePrice], index) => (
-                    <tr key={duration} className={index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"}>
-                      <td className="px-4 py-3 font-medium text-white">{duration} минут</td>
-                      <td className="px-4 py-3 text-center text-purple-400 font-semibold">{singlePrice}</td>
-                      <td className="px-4 py-3 text-center text-gray-300">{massagePrices.block5[duration]}</td>
-                      <td className="px-4 py-3 text-center text-gray-300">{massagePrices.block10[duration]}</td>
-                    </tr>
-                  ))}
+                  {Object.entries(massagePrices.single).map(
+                    ([duration, singlePrice], index) => (
+                      <tr
+                        key={duration}
+                        className={
+                          index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"
+                        }
+                      >
+                        <td className="px-4 py-3 font-medium text-white">
+                          {duration} минут
+                        </td>
+                        <td className="px-4 py-3 text-center text-purple-400 font-semibold">
+                          {singlePrice}
+                        </td>
+                        <td className="px-4 py-3 text-center text-gray-300">
+                          {massagePrices.block5[duration]}
+                        </td>
+                        <td className="px-4 py-3 text-center text-gray-300">
+                          {massagePrices.block10[duration]}
+                        </td>
+                      </tr>
+                    ),
+                  )}
                 </tbody>
               </table>
             </div>
@@ -215,7 +238,10 @@ export default function Prices() {
                     ? "border-purple-600 shadow-lg"
                     : "border-purple-900/30"
                 }`}
-                whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" }}
+                whileHover={{
+                  y: -5,
+                  boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)",
+                }}
               >
                 {service.popular && (
                   <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">
@@ -228,23 +254,17 @@ export default function Prices() {
                 <p className="text-sm mb-4 text-gray-400">
                   {service.description}
                 </p>
-                <p className="text-sm mb-4 text-gray-300">
-                  {service.duration}
-                </p>
+                <p className="text-sm mb-4 text-gray-300">{service.duration}</p>
                 <div className="space-y-2">
                   <p className="text-2xl font-bold text-purple-400">
                     {service.single}
                   </p>
                   {service.block && (
-                    <p className="text-sm text-gray-300">
-                      {service.block}
-                    </p>
+                    <p className="text-sm text-gray-300">{service.block}</p>
                   )}
                   {service.block5 && (
                     <>
-                      <p className="text-sm text-gray-300">
-                        {service.block5}
-                      </p>
+                      <p className="text-sm text-gray-300">{service.block5}</p>
                       {service.block10 && (
                         <p className="text-sm text-gray-300">
                           {service.block10}
@@ -368,7 +388,8 @@ export default function Prices() {
           className="mt-12 bg-gray-900 border border-purple-900/30 rounded-lg p-6 text-center"
         >
           <p className="text-gray-300">
-            <span className="font-semibold">Примечание:</span> Каждая процедура начинается с омовения ног
+            <span className="font-semibold">Примечание:</span> Каждая процедура
+            начинается с омовения ног
           </p>
         </motion.div>
       </div>

@@ -8,49 +8,64 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <h3 className="text-xl font-bold text-purple-400 mb-1">
-                S<span className="relative inline-block">
-                  <span className="text-yellow-400 absolute -top-1 left-0.5 text-xs leading-none">´</span>e
-                </span>tedi
+                S
+                <span className="relative inline-block">
+                  <span className="text-yellow-400 absolute -top-1 left-0.5 text-xs leading-none">
+                    ´
+                  </span>
+                  e
+                </span>
+                tedi
               </h3>
-              <p className="text-xs text-purple-300 font-normal">SPA | HEALTH | RELAX</p>
+              <p className="text-xs text-purple-300 font-normal">
+                SPA | HEALTH | RELAX
+              </p>
             </div>
             <p className="text-white/80 mb-4">
               Профессиональный массаж и SPA-уход в Екатеринбурге
             </p>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-semibold mb-4">
-              Быстрые ссылки
-            </h4>
+            <h4 className="text-lg font-semibold mb-4">Быстрые ссылки</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-white/80 hover:text-purple-400 transition-colors">
+                <a
+                  href="#home"
+                  className="text-white/80 hover:text-purple-400 transition-colors"
+                >
                   Главная
                 </a>
               </li>
               <li>
-                <a href="#benefits" className="text-white/80 hover:text-purple-400 transition-colors">
+                <a
+                  href="#benefits"
+                  className="text-white/80 hover:text-purple-400 transition-colors"
+                >
                   Преимущества
                 </a>
               </li>
               <li>
-                <a href="#prices" className="text-white/80 hover:text-purple-400 transition-colors">
+                <a
+                  href="#prices"
+                  className="text-white/80 hover:text-purple-400 transition-colors"
+                >
                   Услуги
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="text-white/80 hover:text-purple-400 transition-colors">
+                <a
+                  href="#contacts"
+                  className="text-white/80 hover:text-purple-400 transition-colors"
+                >
                   Контакты
                 </a>
               </li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-semibold mb-4">
-              Социальные сети
-            </h4>
+            <h4 className="text-lg font-semibold mb-4">Социальные сети</h4>
             <div className="flex gap-4">
               <motion.a
                 href="https://vk.com/setedee"
@@ -62,7 +77,7 @@ export default function Footer() {
                 VK
               </motion.a>
               <motion.a
-                href="https://instagram.com/dzenzone"
+                href="https://instagram.com/setedi.ru"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -2 }}
@@ -91,13 +106,16 @@ export default function Footer() {
             </div>
             <div className="mt-6">
               <p className="text-white/80 mb-2">Телефон:</p>
-              <a href="tel:+79120312266" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a
+                href="tel:+79120312266"
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+              >
                 +7 (912) 031-22-66
               </a>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/60">
             © {new Date().getFullYear()} Setedi. Все права защищены.
