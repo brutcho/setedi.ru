@@ -59,3 +59,5 @@ const YandexMetrika = () => {
     </noscript>
   );
 };
+
+export default YandexMetrika;
