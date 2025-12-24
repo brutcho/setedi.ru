@@ -2,23 +2,19 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Анна",
+    name: "Артем",
     role: "Мастер массажа",
     experience: "5 лет опыта",
-    specialty: "Классический и лечебный массаж"
+    specialty: "Классический и лечебный массаж",
+    image: "/images/team/master1.png",
   },
   {
-    name: "Мария",
-    role: "SPA-специалист",
-    experience: "7 лет опыта",
-    specialty: "Ароматерапия и релакс-процедуры"
-  },
-  {
-    name: "Елена",
+    name: "Сергей",
     role: "Мастер массажа",
-    experience: "4 года опыта",
-    specialty: "Спортивный и антицеллюлитный массаж"
-  }
+    experience: "5 лет опыта",
+    specialty: "Огненный и спортивный массаж",
+    image: "/images/team/master2.png",
+  },
 ];
 
 export default function Team() {
@@ -48,12 +44,16 @@ export default function Team() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="w-64 h-64 md:w-72 md:h-72 text-center bg-gray-900 p-6 rounded-full border border-purple-900/30 hover:shadow-xl hover:border-purple-600/50 transition-all flex flex-col items-center justify-center"
+              className="w-64 h-64 md:w-72 md:h-72 text-center bg-gray-900 p-6 rounded-md hover:shadow-xl hover:border-purple-600/50 transition-all flex flex-col items-center justify-center"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="w-24 h-24 md:w-28 md:h-28 mb-4 bg-gradient-to-br from-purple-600/20 to-purple-500/20 rounded-full flex items-center justify-center border-4 border-purple-900/30">
-                <span className="text-4xl md:text-5xl">👤</span>
-              </div>
+              <img
+                src={member.image}
+                alt={member.name}
+                width={100}
+                height={100}
+                className="w-24 h-24 md:w-28 md:h-28 mb-4 bg-gradient-to-br from-purple-600/20 to-purple-500/20 rounded-full flex items-center justify-center border-4 border-purple-900/30"
+              />
               <h3 className="text-xl md:text-2xl font-semibold mb-1 text-white">
                 {member.name}
               </h3>
