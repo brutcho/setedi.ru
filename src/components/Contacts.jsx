@@ -9,20 +9,37 @@ export default function Contacts() {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({
+    success: null,
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    // Очищаем ошибку при изменении поля
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
 
   const validateForm = () => {
     const newErrors = {};
+
     if (!formData.name.trim()) {
-      newErrors.name = "Введите ваше имя";
+      newErrors.name = "Укажите ваше имя";
+    } else if (formData.name.length < 2) {
+      newErrors.name = "Имя слишком короткое";
     }
+
     if (!formData.phone.trim()) {
-      newErrors.phone = "Введите номер телефона";
-    } else if (!/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
-      newErrors.phone = "Некорректный номер телефона";
+      newErrors.phone = "Укажите номер телефона";
+    } else if (!/^[\d\s\-\+\(\)]{7,20}$/.test(formData.phone)) {
+      newErrors.phone = "Введите корректный номер";
     }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+
+    return newErrors;
   };
 
   const handleSubmit = async (e) => {
@@ -69,14 +86,6 @@ export default function Contacts() {
       console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
@@ -224,7 +233,7 @@ export default function Contacts() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-semibold mb-6">Онлайн запись</h3>
-            {submitted ? (
+            {isSubmitting ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
