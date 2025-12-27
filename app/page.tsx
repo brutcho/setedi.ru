@@ -9,7 +9,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <HeroCarousel />
       <WhoWeAre />
-      <PricesLuxury />
+      {/*<PricesLuxury />*/}
       <MastersGrid />
       <LocationMap />
       {/* Блоки "Услуги" и "Польза массажа" будут добавлены позже */}
