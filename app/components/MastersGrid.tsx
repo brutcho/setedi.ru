@@ -7,15 +7,15 @@ const masters = [
   {
     id: 1,
     name: "Артём",
-    experience: "12 ЛЕТ",
+    experience: "8 ЛЕТ",
     specialization: ["КЛАССИЧЕСКИЙ МАССАЖ", "РЕЛАКС ТЕРАПИЯ"],
     image: "/images/team/master1.png",
   },
   {
     id: 2,
     name: "Сергей",
-    experience: "8 ЛЕТ",
-    specialization: ["СПОРТИВНЫЙ МАССАЖ", "КРАНИОСАКРАЛЬНАЯ"],
+    experience: "4 ГОДА",
+    specialization: ["СПОРТИВНЫЙ МАССАЖ", "ОГНЕННЫЙ МАССАЖ"],
     image: "/images/team/master2.png",
   },
 ];
