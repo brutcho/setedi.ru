@@ -19,12 +19,6 @@ export default function WhoWeAre() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
 
               {/* Можно оставить текст поверх или убрать */}
-              <div className="absolute bottom-8 left-0 right-0 text-center z-10">
-                <div className="w-16 h-1 bg-gradient-to-r from-lavender/0 via-lavender to-lavender/0 mx-auto mb-4" />
-                <p className="text-gray-200 tracking-widest text-sm">
-                  ПОРТРЕТ МАСТЕРА
-                </p>
-              </div>
             </div>
           </div>
 
