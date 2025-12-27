@@ -1,49 +1,11 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": [
-      "static/chunks/e8fa1_next_dist_compiled_41c66438._.js",
-      "static/chunks/e8fa1_next_dist_shared_lib_10648ab0._.js",
-      "static/chunks/e8fa1_next_dist_client_320609c8._.js",
-      "static/chunks/e8fa1_next_dist_e92aac2c._.js",
-      "static/chunks/e8fa1_next_app_092512ad.js",
-      "static/chunks/[next]_entry_page-loader_ts_f1a8fd03._.js",
-      "static/chunks/e8fa1_react-dom_4cd675f7._.js",
-      "static/chunks/e8fa1_352c0f02._.js",
-      "static/chunks/[root-of-the-server]__7723eb9d._.js",
-      "static/chunks/setedi-next_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-setedi-next_pages__app_ce96b58f._.js"
-    ],
-    "/_error": [
-      "static/chunks/e8fa1_next_dist_compiled_41c66438._.js",
-      "static/chunks/e8fa1_next_dist_shared_lib_aca25d2c._.js",
-      "static/chunks/e8fa1_next_dist_client_320609c8._.js",
-      "static/chunks/e8fa1_next_dist_55c5f5ca._.js",
-      "static/chunks/e8fa1_next_error_cea95d68.js",
-      "static/chunks/[next]_entry_page-loader_ts_71d7b842._.js",
-      "static/chunks/e8fa1_react-dom_4cd675f7._.js",
-      "static/chunks/e8fa1_352c0f02._.js",
-      "static/chunks/[root-of-the-server]__5ae68195._.js",
-      "static/chunks/setedi-next_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-setedi-next_pages__error_1873c4be._.js"
-    ]
+    "/_app": []
   },
   "devFiles": [],
-  "polyfillFiles": [
-    "static/chunks/e8fa1_next_dist_build_polyfills_polyfill-nomodule.js"
-  ],
+  "polyfillFiles": [],
   "lowPriorityFiles": [],
-  "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_7a770d06._.js",
-    "static/chunks/e8fa1_next_dist_compiled_react-dom_f1d805ce._.js",
-    "static/chunks/e8fa1_next_dist_compiled_react-server-dom-turbopack_0c026b31._.js",
-    "static/chunks/e8fa1_next_dist_compiled_next-devtools_index_edf2f7f5.js",
-    "static/chunks/e8fa1_next_dist_compiled_c335fed8._.js",
-    "static/chunks/e8fa1_next_dist_client_a206dd13._.js",
-    "static/chunks/e8fa1_next_dist_bf1b2cf3._.js",
-    "static/chunks/e8fa1_@swc_helpers_cjs_998ac35d._.js",
-    "static/chunks/setedi-next_a0ff3932._.js",
-    "static/chunks/turbopack-setedi-next_9b56eda8._.js"
-  ]
+  "rootMainFiles": []
 };
 globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
 "/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",

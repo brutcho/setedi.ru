@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf build && next build",
+    "build:clean": "rm -rf build .next && next build",
+    "build:static": "rm -rf build && next build && cp -r public/* build/ || true",
+    "prebuild": "rm -rf build"
     "start": "next start",
     "lint": "eslint"
   },
@@ -26,4 +29,3 @@
     "typescript": "^5"
   }
 }
-

@@ -3,12 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   turbopack: {},
 
-  // Опционально: отключи Turbopack если нужно
-  // experimental: {
-  //   turbo: {
-  //     // Конфигурация для Turbopack
-  //   }
-  // },
+  output: "export",
+  distDir: "build",
+  trailingSlash: false,
 
   webpack(config) {
     config.module.rules.push({
