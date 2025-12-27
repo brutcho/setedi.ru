@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+    --color-lavender: #7b52b9;
+    --color-amber: #fbbf24;
+    --font-playfair: var(--font-playfair);
+    --font-inter: var(--font-inter);
+}
+
+@layer base {
+    body {
+        background: radial-gradient(
+            circle at 20% 50%,
+            #1a1a1a 0%,
+            #0a0a0a 100%
+        );
+    }
+
+    ::selection {
+        background: rgba(90, 60, 140, 0.3);
+        color: #fafafa;
+    }
+}
+
+@layer utilities {
+    .text-gradient-lavender {
+        background: linear-gradient(135deg, #7b52b9 0%, #5a3c8c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-amber {
+        background: linear-gradient(135deg, #fbbf24 0%, #f9d016 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .border-glow {
+        box-shadow: 0 0 30px rgba(90, 60, 140, 0.3);
+    }
+}
