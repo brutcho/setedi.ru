@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import NavLuxury from "./components/NavLuxury";
 import FooterMinimal from "./components/FooterMinimal";
+import YandexMetrika from "./components/YandexMetrika";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <main className="flex-grow pt-20">{children}</main>{" "}
           {/* pt-20 чтобы контент не скрывался под фиксированной шапкой */}
           <FooterMinimal />
+          <YandexMetrika />
         </div>
       </body>
     </html>

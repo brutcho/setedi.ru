@@ -1,0 +1,10 @@
+[00:07:31.741] Server  ERROR   ⨯ TurbopackInternalError: Failed to restore task data (corrupted database or bug): Meta for <DiskFileSystem as FileSystem>::read (TaskId 11929))
+
+Debug info:
+- Failed to restore task data (corrupted database or bug): Meta for <DiskFileSystem as FileSystem>::read (TaskId 11929))
+  
+  Caused by:
+      0: Looking up data for TaskId 11929 from database failed
+      1: Unable to open static sorted file referenced from 00000049.meta
+      2: Unable to open static sorted file 00000046.sst
+      3: No such file or directory (os error 2)
