@@ -7,7 +7,7 @@
     "build": "rm -rf build && next build",
     "build:clean": "rm -rf build .next && next build",
     "build:static": "rm -rf build && next build && cp -r public/* build/ || true",
-    "prebuild": "rm -rf build"
+    "prebuild": "rm -rf build",
     "start": "next start",
     "lint": "eslint"
   },
