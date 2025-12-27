@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function WhoWeAre() {
   return (
     <section className="py-32 px-6">
@@ -12,13 +10,10 @@ export default function WhoWeAre() {
           {/* Фото */}
           <div className="lg:col-span-7 relative">
             <div className="aspect-[4/5] bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] overflow-hidden relative">
-              <Image
+              <img
                 src="/images/image-1.jpg" // путь к фото
                 alt="Мастер Sétedi"
-                fill // заполняет родительский контейнер
-                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-90"
-                priority // если это важное изображение
               />
               {/* Наложение градиента для атмосферы */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
