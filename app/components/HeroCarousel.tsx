@@ -3,8 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import videoSrc from "@/public/videos/video.mp4";
-
-const slides = [
+type SlideType = {
+  id: number;
+  type: "video" | "image" | "text";
+  content: string; // ТОЛЬКО string, не null
+  text: string;
+  position: "left" | "center" | "right";
+};
+const slides: SlideType[] = [
   {
     id: 1,
     type: "video",
@@ -22,7 +28,7 @@ const slides = [
   {
     id: 3,
     type: "text",
-    content: null,
+    content: "",
     text: "MASSAGE IS A SILENT LANGUAGE",
     position: "center",
   },
