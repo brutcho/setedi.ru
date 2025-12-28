@@ -28,7 +28,7 @@ export default function NavLuxury() {
     },
     {
       icon: <FaTelegram size={18} />,
-      href: "https://t.me/setedispa",
+      href: "https://t.me/79120312266",
       label: "Telegram",
     },
     {
@@ -183,7 +183,7 @@ export default function NavLuxury() {
                 href="tel:=79120312266"
                 className="text-lg tracking-widest text-amber"
               >
-                +8 912 031-22-66
+                +7 912 031-22-66
               </a>
             </div>
           </div>
