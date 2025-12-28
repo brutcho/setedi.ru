@@ -19,11 +19,11 @@ export default function FooterMinimal() {
       href: "https://vk.com/setedee",
       label: "VKontakte",
     },
-    {
-      icon: <FiMessageSquare size={18} />,
-      href: "https://wa.me/79999999999",
-      label: "WhatsApp",
-    },
+    // {
+    //   icon: <FiMessageSquare size={18} />,
+    //   href: "https://wa.me/79999999999",
+    //   label: "WhatsApp",
+    // },
   ];
 
   return (

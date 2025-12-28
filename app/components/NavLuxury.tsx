@@ -180,10 +180,10 @@ export default function NavLuxury() {
                 ))}
               </div>
               <a
-                href="tel:+79999999999"
+                href="tel:=79120312266"
                 className="text-lg tracking-widest text-amber"
               >
-                +7 999 999-99-99
+                +8 912 031-22-66
               </a>
             </div>
           </div>
