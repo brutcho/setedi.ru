@@ -11,7 +11,7 @@ export default function FooterMinimal() {
     },
     {
       icon: <FaTelegram size={18} />,
-      href: "https://t.me/79120312266",
+      href: "https://t.me/setedi_support",
       label: "Telegram",
     },
     {
